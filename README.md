@@ -1,41 +1,70 @@
-# Grupparbete - AirBean
+# Getting Started with Create React App
 
-Du ska bygga en webbapp där du kan beställa kaffe och få den levererad via drönare (drönare ingår ej i uppgiften).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**Figmaskiss:** https://www.figma.com/file/kXZaZLMYQzXzgC2k6o4ne0/AirBean-v.1.2---React?node-id=0%3A1
+## Available Scripts
 
-## Instruktioner
+In the project directory, you can run:
 
-**För att få Godkänt ska du:**
-* Gjort enligt Figma skissen
-* Använder sig av Redux med en Redux store
-* Gå att lägga till produkter i en varukorg
-* I varukorgen ändra antal/ta bort produkter
-* Hämta alla produkter med fetch
-* Kunna skicka sin order och få ett svar med en ETA och ordernummer
+### `npm start`
 
-**För att Väl Godkänt ska du:**
-* Allt i godkänt
-* Ha gjort tester för minst en komponent
-* Det går att lägga till varukorgen i local storage samt hämta den därifrån
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Inlämning är på Github i det repo som skapades via Github Classroom. Ta länken till ert repo och
-lägg till som en kommentar på Ping Pong och lämna in uppgiften där senast **4 mars 2021 23:59**.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
+### `npm test`
 
-## Airbean API
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Endpoint: `http://localhost:5000/api/beans`
+### `npm run build`
 
-Metod: `GET`
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Beskrivning: För att hämta menyn
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Endpoint: `http://localhost:5000/api/beans`
+### `npm run eject`
 
-Metod: `POST`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Beskrivning: För att posta en beställning
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
