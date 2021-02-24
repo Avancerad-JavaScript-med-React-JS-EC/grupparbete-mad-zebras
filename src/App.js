@@ -22,6 +22,7 @@ function App() {
     </div>
 =======
     <section>
+<<<<<<< Updated upstream
       <Switch>
           <Route path ="/" component ={Landing} exact />
           <Route path ="/menu/:id" component ={Menu} />
@@ -30,6 +31,20 @@ function App() {
           <Route path="/cart/:id" component={Cart} />
           <Route path="/status/:id" component={Status} />
         </Switch>
+=======
+     
+     <Switch>
+      <Route path ="/" component ={Landing} exact />
+      <Route path ="/menu/:id" component ={Menu} />
+      <Route path="/nav/:id" component ={Nav} />
+      <Route path="/About/:id" component={About} />
+      <Route path="/cart/:id" component={Cart} />
+      <Route path="/status/:id" component={Status} />
+
+
+
+     </Switch>
+>>>>>>> Stashed changes
     </section>
 >>>>>>> Stashed changes
   );
