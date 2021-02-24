@@ -8,7 +8,7 @@ function Landing() {
     const history = useHistory();
 
     return (
-        <div className='container'>
+        <div className='landing-container'>
             <div className='logo-container'>
                 <button className='btn-logo' onClick={ () => history.push(`/nav`) }>A</button>
             </div>
