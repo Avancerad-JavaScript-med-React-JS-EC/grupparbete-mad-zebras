@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    padding: 2rem;
+    height: 29rem;
+    margin-top: 17rem;
+    background: #38846D;
+    color: whitesmoke;
+}
+
+.btn-logo{
+    padding: 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.651);
+    border: none;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.title{
+    font-family: Rufina;
+}
+
+p{
+    font-family: Rufina;
+}

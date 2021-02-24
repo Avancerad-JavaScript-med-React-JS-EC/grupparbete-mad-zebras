@@ -20,6 +20,11 @@
         "desc":"Bryggd på månadens bönor.",
         "price":54
       },
-      {"id":6,"title":"Cortado","desc":"Bryggd på månadens bönor.","price":39}
+      { 
+        "id":6,
+        "title":"Cortado",
+        "desc":"Bryggd på månadens bönor.",
+        "price":39
+      }
     ]
   }
