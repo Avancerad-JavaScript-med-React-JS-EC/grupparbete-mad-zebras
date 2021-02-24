@@ -10,7 +10,7 @@ function Landing() {
     return (
         <div className='container'>
             <div className='logo-container'>
-                <button className='btn-logo' onClick={ () => history.push(`/nav`) }>A</button>
+                <button className='btn-logo' onClick={ () => history.push(`/about`) }>A</button>
             </div>
 
             <div>
