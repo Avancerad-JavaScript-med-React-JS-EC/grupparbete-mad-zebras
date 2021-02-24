@@ -1,11 +1,11 @@
 import React from 'react';
 
-function landing(props) {
+function Landing(props) {
     return (
         <div>
-            
+            hej 
         </div>
     );
 }
 
-export default landing;
+export default Landing;

@@ -1,11 +1,12 @@
 import React from 'react';
 
-function status(props) {
+function Status(props) {
     return (
-        <div>
-            
-        </div>
+      <section>
+
+
+      </section>
     );
 }
 
-export default status;
+export default Status;
