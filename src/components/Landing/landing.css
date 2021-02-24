@@ -9,6 +9,7 @@
     margin-top: 10rem;
     background: #38846D;
     position: relative;
+    overflow: hidden;
 }
 
 .logo{
