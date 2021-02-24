@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   return (
+<<<<<<< Updated upstream
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,6 +20,18 @@ function App() {
         </a>
       </header>
     </div>
+=======
+    <section>
+      <Switch>
+          <Route path ="/" component ={Landing} exact />
+          <Route path ="/menu/:id" component ={Menu} />
+          <Route path="/nav/:id" component ={Nav} />
+          <Route path="/About/:id" component={About} />
+          <Route path="/cart/:id" component={Cart} />
+          <Route path="/status/:id" component={Status} />
+        </Switch>
+    </section>
+>>>>>>> Stashed changes
   );
 }
 
