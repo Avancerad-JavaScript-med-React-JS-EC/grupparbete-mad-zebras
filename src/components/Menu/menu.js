@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Menu(props) {
+function Menu() {
     return (
         <div>
-            
+            <p>menu section</p>
         </div>
     );
 }
