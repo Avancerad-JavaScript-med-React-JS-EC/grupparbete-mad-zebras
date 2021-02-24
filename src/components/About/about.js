@@ -1,9 +1,9 @@
 import React from 'react';
 
-function About() {
+function About(props) {
     return (
         <div>
-            <h1>hej igen</h1>
+            <h1>hej igen kompisar</h1>
         </div>
     );
 }
