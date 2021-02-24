@@ -1,10 +1,10 @@
 import {Route, Switch} from 'react-router-dom'; 
-import About from './components/About/About';
-import Cart from './components/Cart/Cart';
-import Nav from './components/Nav/Nav';
-import Menu from './components/Menu/Menu'; 
-import Landing from './components/Landing/Landing'; 
-import Status from './components/Status/Status';
+import About from './components/About/about';
+import Cart from './components/Cart/cart';
+import Nav from './components/Nav/nav';
+import Menu from './components/Menu/menu'; 
+import Landing from './components/Landing/landing'; 
+import Status from './components/Status/status';
 import './App.css';
 
 function App() {
