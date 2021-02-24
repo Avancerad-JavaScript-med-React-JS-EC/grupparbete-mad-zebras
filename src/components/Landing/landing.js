@@ -1,7 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import './landing.css';
-
+import logo from '../../assets/graphics/airbean-landing.svg'
+import footer from '../../assets/graphics/graphics-footer.svg'
+import header from '../../assets/graphics/graphics-header.svg'
+import left from '../../assets/graphics/intro-graphic-left.svg'
+import right from '../../assets/graphics/intro-graphic-right.svg'
 
 function Landing() {
 
@@ -10,13 +14,12 @@ function Landing() {
     return (
         <div className='landing-container'>
             <div className='logo-container'>
-                <button className='btn-logo' onClick={ () => history.push(`/nav`) }>A</button>
+                <img src={logo} onClick={ () => history.push(`/nav`) } className='logo' alt='logo'/>
             </div>
-
-            <div>
-                <h2 className='title'>AIR BEAN</h2>
-                <p>DRONEDELIVERED COFFEE</p>
-            </div>
+            <img src={header} className='header' alt='header'/>
+            <img src={left} className='left' alt='left'/>
+            <img src={right} className='right' alt='right'/>
+            <img src={footer} className='footer' alt='footer'/>
         </div>
     );
 }

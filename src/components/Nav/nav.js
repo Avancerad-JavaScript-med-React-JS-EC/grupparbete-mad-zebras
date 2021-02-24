@@ -8,8 +8,8 @@ function Nav() {
 
     return (
         <div className='nav-container'>
-            <div className='btn-container'>
-                <button className='nav-btn' onClick={ () => history.push(`/menu`) }>X</button>
+            <div className='nav-btn-container'>
+                <button className='nav-btn' onClick={ () => history.push(`/menu`) }>✕</button>
             </div>
 
             <div className='menu-list'>

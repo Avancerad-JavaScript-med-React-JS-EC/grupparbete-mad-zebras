@@ -1,6 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import './about.css';
+import eva from '../../assets/graphics/eva-cortado.jpg'
+import footer from '../../assets/graphics/graphics-footer.svg'
+import header from '../../assets/graphics/graphics-header.svg'
+import navIcon from '../../assets/graphics/navicon.svg'
 
 function About() {
 
@@ -8,8 +12,12 @@ function About() {
 
     return (
         <div className='about-container'>
+
+            <img src={header} className='header' alt='header'/>
+            <img src={footer} className='footer' alt='footer'/>
+
             <div className='btn-container'>
-                <button className='about-btn' onClick={ () => history.push(`/nav`) }>X</button>
+                <img src={navIcon} onClick={ () => history.push(`/nav`) } alt='icon'/>
             </div>
 
             <div className='text-container'>
@@ -23,10 +31,11 @@ function About() {
             </div>
 
             <div className='about-pic-container'>
-                <img src='./eva-cortado.jpg' alt='eva' />
-                <h3>Eva Cortado</h3>
-                <p>VD & Grundare</p>
+                <img src={eva} alt='eva' className='pic' />
+                <h3 className='eva-text big'>Eva Cortado</h3>
+                <p className='eva-text'>VD & Grundare</p>
             </div>
+
         </div>
     );
 }

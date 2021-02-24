@@ -3,30 +3,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     border: 1px solid black;
-    padding: 2rem;
-    height: 29rem;
-    margin-top: 17rem;
+    padding: 3.7rem;
+    height: 34.1rem;
+    margin-top: 10rem;
     background: #38846D;
-    color: whitesmoke;
+    position: relative;
 }
 
-.btn-logo{
-    padding: 1rem;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.651);
-    border: none;
+.logo{
     cursor: pointer;
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: 1.2rem;
 }
 
-.title{
-    font-family: Rufina;
+.header{
+    position: absolute;
+    top: 0;
 }
 
-p{
-    font-family: Rufina;
+.left{
+    position: absolute;
+    left: 0;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
 }
