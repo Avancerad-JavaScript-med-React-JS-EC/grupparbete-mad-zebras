@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import menu from '../../assets/data/menu.json';
+import CoffeeMenu from './coffeeMenu';
+
+
 
 function Menu() {
+    
+    const [coffees, setCoffees] = useState([]);
+    
+    useEffect(() => {
+        setCoffees(menu.menu);
+    }, []);
+
+    console.log(coffees)
+    
+
     return (
-        <div>
-            <h1>Här är menyn</h1>
-            <h2>Meny för Kaffe</h2>
-        </div>
-    );
+        <section>
+            
+            {coffees.map((coffee) => {
+                 return  <CoffeeMenu coffee={ coffee } key={ coffee.id }/> 
+            })}
+        </section>
+    )
 }
 
 export default Menu;
