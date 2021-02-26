@@ -1,8 +1,8 @@
-const showCoffeeAction = (coffee) => {
+const CoffeeAction = (coffee) => {
     return {
-        type: 'SHOW_COFFEE',
-        payload: coffee
+        type: 'ADD_COFFEE',
+        payload: coffee.price
     }
 }
 
-export default showCoffeeAction
+export default CoffeeAction

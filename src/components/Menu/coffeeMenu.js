@@ -2,7 +2,7 @@ import React from 'react';
 /* import { useHistory } from 'react-router-dom'; */
 import { useDispatch } from 'react-redux';
 
-import showCoffeeAction from '../../actions/action'
+import CoffeeAction from '../../actions/action'
 
 function CoffeeMenu({ coffee }){
 
@@ -10,12 +10,14 @@ function CoffeeMenu({ coffee }){
     const dispatch = useDispatch();
 
     function handeClick(){
-        dispatch(showCoffeeAction(coffee))
+        dispatch(CoffeeAction(coffee))
     }
     console.log(coffee)
     return(
         <section onClick={ handeClick }>
-            {/* <h1>{ coffee.title }</h1> */}
+            <h2>{ coffee.title }</h2>
+            <p>{ coffee.desc }</p>
+            <h1>{ coffee.price } kr</h1>
         </section>
     )
 }

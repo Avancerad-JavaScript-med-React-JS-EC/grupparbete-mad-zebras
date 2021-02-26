@@ -9,17 +9,17 @@ function Menu() {
     const [coffees, setCoffees] = useState([]);
     
     useEffect(() => {
-        setCoffees(menu);
-    }, [])
+        setCoffees(menu.menu);
+    }, []);
 
-    console.log(coffees.menu)
+    console.log(coffees)
     
 
     return (
         <section>
             
-            { coffees.menu.map((coffee) => {
-                 return <CoffeeMenu coffee={ coffee }/>
+            {coffees.map((coffee) => {
+                 return  <CoffeeMenu coffee={ coffee } key={ coffee.id }/> 
             })}
         </section>
     )

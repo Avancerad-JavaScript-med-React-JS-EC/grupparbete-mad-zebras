@@ -2,14 +2,12 @@ let initialState = {
     coffee: []
 }
 
-const coffeeReducer = (state = initialState, action) => {
+const coffeeReducer = (state = 0, action) => {
     switch (action.type) {
-        case 'SHOW_COFFEE':
-            return {
-                coffee: action.payload
-            }
-    
-        default:
+        case 'ADD_COFFEE':
+            return state + action.payload
+         
+    default:
             return state;
     }
 }
