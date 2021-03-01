@@ -6,6 +6,7 @@ import footer from '../../assets/graphics/graphics-footer.svg'
 import header from '../../assets/graphics/graphics-header.svg'
 import navIcon from '../../assets/graphics/navicon.svg'
 
+<<<<<<< HEAD
 function About() {
 
     const history = useHistory();
@@ -36,6 +37,12 @@ function About() {
                 <p className={aboutStyle.evaText}>VD & Grundare</p>
             </div>
 
+=======
+function About(props) {
+    return (
+        <div>
+            <h1>hej igen kompisar</h1>
+>>>>>>> master
         </div>
     );
 }
