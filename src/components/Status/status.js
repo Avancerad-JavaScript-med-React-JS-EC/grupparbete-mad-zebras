@@ -16,10 +16,18 @@ const Status = () => {
 
 useEffect(()=>{
  
+
+
+
   fetch('http://localhost:5000/api/beans', {method: 'POST'})
   .then(response =>response.json())
   
   .then (response=>{
+  //   window.localStorage.setItem("data", JSON.stringify(data.user));                            
+  // console.log(JSON.parse(window.localStorage.getItem("user"))); 
+  // const ref="/homepage";
+  // history.push(ref);
+
 console.log(response); 
     console.log(response.eta); 
     console.log(response.orderNr); 
