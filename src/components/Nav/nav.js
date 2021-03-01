@@ -1,22 +1,22 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import './nav.css'
+import navStyle from './nav.module.css'
 
 function Nav() {
 
     const history = useHistory();
 
     return (
-        <div className='nav-container'>
+        <div className={navStyle.navContainer}>
             <div className='nav-btn-container'>
-                <button className='nav-btn' onClick={ () => history.push(`/menu`) }>✕</button>
+                <button className={navStyle.navBtn} onClick={ () => history.push(`/menu`) }>✕</button>
             </div>
 
             <div className='menu-list'>
-                <h2 className='list-title' onClick={ () => history.push(`/menu`) }>Meny</h2>
-                <hr className="center-line"></hr>
-                <h2 className='list-title' onClick={ () => history.push(`/about`) }>Vårt Kaffe</h2>
-                <hr className="center-line"></hr>
+                <h2 className={navStyle.listTitle} onClick={ () => history.push(`/menu`) }>Meny</h2>
+                <hr className={navStyle.centerLine}></hr>
+                <h2 className={navStyle.listTitle} onClick={ () => history.push(`/about`) }>Vårt Kaffe</h2>
+                <hr className={navStyle.centerLine}></hr>
             </div>
         </div>
     );

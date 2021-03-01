@@ -1,4 +1,4 @@
-.nav-container{
+.navContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
     position: relative;
 }
 
-.nav-btn{
+.navBtn{
     position: absolute;
     top: .8rem;
     left: .8rem;
@@ -26,13 +26,13 @@
     color: #2F2926;
 }
 
-.list-title{
+.listTitle{
     font-family: PT Serif;
     font-size: 2rem;
     cursor: pointer;
 }
 
-.center-line{
+.centerLine{
     width: 3rem;
     height: -.4rem;
     color: red;

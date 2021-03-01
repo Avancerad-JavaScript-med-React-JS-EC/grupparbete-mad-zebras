@@ -1,4 +1,4 @@
-.about-container{
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@
     overflow: hidden;
 }
 
-.btn-container{
+.btnContainer{
     position: absolute;
     top: .8rem;
     left: .8rem;
@@ -26,15 +26,15 @@
     border-radius: 20px;
 }
 
-.about-title, .eva-text{
+.title, .evaText{
     font-family: PT Serif;
 }
 
-.about-bold-text{
+.boldText{
     font-weight: bold;
 }
 
-.about-pic-container{
+.picContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,4 +48,14 @@
 
 .big{
     font-size: 1.5rem;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
 }
