@@ -13,6 +13,7 @@ const Status = () => {
     const history = useHistory(); 
 
     const [data,setData]= useState([]); 
+    const ref= "/";
 
   useEffect(()=>{
   
@@ -20,9 +21,13 @@ const Status = () => {
     .then(response =>response.json())
     
     .then (response=>{
+      window.localStorage.setItem('response', JSON.stringify(response.eta));
+      console.log(JSON.parse(window.localStorage.getItem('response')));
+      // history.push(ref);
+      
   console.log(response); 
-      console.log(response.eta); 
-      console.log(response.orderNr); 
+      // console.log(response.eta); 
+      // console.log(response.orderNr); 
       
   setData(response); 
     })

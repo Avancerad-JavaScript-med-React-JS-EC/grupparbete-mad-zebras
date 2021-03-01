@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './Cart.module.css'; 
 
 function Cart() {
     return (
@@ -12,7 +13,7 @@ function Cart() {
             <h2></h2>
 
             <h1 className={style.total}>Total</h1>
-            <p className={subTotal}>Take my money!</p>
+            <p className={style.subTotal}>Take my money!</p>
             <button className={style.button}>Take my money!</button>
         </section>
     );
