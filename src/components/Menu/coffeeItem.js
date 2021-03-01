@@ -10,13 +10,15 @@ function CoffeeMenu({ coffee }){
 
     function handeClick(){
         dispatch(CoffeeAction(coffee))
+
     }
     
     return(
-        <section className={ style.section } onClick={ handeClick }>
-            <h2>{ coffee.title }</h2>
+        <section 
+        className={ style.section } onClick={ handeClick }>
+            <h1>{ coffee.title }</h1>
             <p>{ coffee.desc }</p>
-            <h1>{ coffee.price } kr</h1>
+            <h2>{ coffee.price } kr</h2>
         </section>
     )
 }
