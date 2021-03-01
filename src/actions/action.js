@@ -1,13 +1,16 @@
 const CoffeeAction = (coffee) => {
     return {
-        type: 'ADD_COFFEE_TOTAL',
+        type: 'ADD_COFFEE',
         total_price: coffee.price,
-        type_of_coffee: {
-            id: coffee.id,
-            title: coffee.title,
-            price: coffee.price
-            
-        }
+        payload: coffee
+    }
+}
+
+export const CoffeeActionREMOVE = (coffee) => {
+    return {
+        type: 'REMOVE_COFFEE',
+        total_price: coffee.price,
+        payload: coffee
     }
 }
 
