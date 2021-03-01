@@ -14,7 +14,7 @@ function Landing() {
     return (
         <div className={mainStyle.container}>
             <div className='logo-container'>
-                <img src={logo} onClick={ () => history.push(`/nav`) } className={mainStyle.logo} alt='logo'/>
+                <img src={logo} onClick={ () => history.push(`/menu`) } className={mainStyle.logo} alt='logo'/>
             </div>
             <img src={header} className={mainStyle.header} alt='header'/>
             <img src={left} className={mainStyle.left} alt='left'/>
