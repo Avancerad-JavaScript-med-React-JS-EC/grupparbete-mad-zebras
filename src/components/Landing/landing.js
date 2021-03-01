@@ -14,16 +14,7 @@ function Landing() {
     return (
         <div className={mainStyle.container}>
             <div className='logo-container'>
-<<<<<<< HEAD
                 <img src={logo} onClick={ () => history.push(`/menu`) } className={mainStyle.logo} alt='logo'/>
-=======
-                <button className='btn-logo' onClick={ () => history.push(`/about`) }>A</button>
-            </div>
-
-            <div>
-                <h2 className='title'>AIR BEAN</h2>
-                <p>DRONEDELIVERED COFFEE</p>
->>>>>>> master
             </div>
             <img src={header} className={mainStyle.header} alt='header'/>
             <img src={left} className={mainStyle.left} alt='left'/>
