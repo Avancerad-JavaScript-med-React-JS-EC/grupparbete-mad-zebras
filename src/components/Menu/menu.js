@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import menu from '../../assets/data/menu.json';
-import CoffeeMenu from './coffeeMenu';
+
+import CoffeeItem from './coffeeItem';
+import style from './menu.module.css'
 
 
 
 function Menu() {
     
     const [coffees, setCoffees] = useState([]);
-    
-    useEffect(() => {
-        setCoffees(menu.menu);
-    }, []);
 
-    console.log(coffees)
+    useEffect(()=>{
+        fetch('http://localhost:5000/api/beans', {method: 'GET'})
+        .then(response =>response.json())
+        .then (response=>{ setCoffees(response.menu) })
+    }, [])
+
     
 
     return (
         <section>
-            
+            <h1 className={ style.section }>Meny</h1>
             {coffees.map((coffee) => {
-                 return  <CoffeeMenu coffee={ coffee } key={ coffee.id }/> 
+                 return  <CoffeeItem coffee={ coffee } key={ coffee.id }/> 
             })}
         </section>
     )
