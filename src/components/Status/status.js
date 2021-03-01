@@ -21,8 +21,8 @@ const Status = () => {
     .then(response =>response.json())
     
     .then (response=>{
-      window.localStorage.setItem('response', JSON.stringify(response.eta));
-      console.log(JSON.parse(window.localStorage.getItem('response')));
+      // window.localStorage.setItem('response', JSON.stringify(response.eta));
+      // console.log(JSON.parse(window.localStorage.getItem('response')));
       // history.push(ref);
       
   console.log(response); 
