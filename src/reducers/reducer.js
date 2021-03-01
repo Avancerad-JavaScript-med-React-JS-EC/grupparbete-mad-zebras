@@ -26,7 +26,9 @@ const coffeeReducer = (state = initialState, action) => {
 
                 coffees: [
                     ...state.coffees,
-                    /* state.filter(coffees) */
+
+                    state.coffees.filter(coffee => (
+                        coffee.id !== action.payload.id))
                     /* {
                         id: action.payload.id,
                         title: action.payload.title,
