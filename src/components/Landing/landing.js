@@ -1,11 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
+import './landing.css';
 
 
 function Landing() {
+
+    const history = useHistory();
+
     return (
-        <div>
-            <Link to="/menu"><h1>Tryck Här</h1></Link>
+        <div className='container'>
+            <div className='logo-container'>
+                <button className='btn-logo' onClick={ () => history.push(`/about`) }>A</button>
+            </div>
+
+            <div>
+                <h2 className='title'>AIR BEAN</h2>
+                <p>DRONEDELIVERED COFFEE</p>
+            </div>
         </div>
     );
 }
