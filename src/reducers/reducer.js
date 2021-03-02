@@ -42,3 +42,19 @@ const coffeeReducer = (state = initialState, action) => {
 }
 
 export default coffeeReducer
+
+/* case 'UPDATE':
+
+            return {​​
+                ...state,
+                coffees: coffees.map(coffee => {​​
+                            if (coffee.id !== action.payload.id) {​​
+                            return coffee;
+                        }​​
+
+                    return {​​
+                        …coffee,
+                        quantity: coffee.quantity + 1
+                    }​​
+                }​​)
+            } */
