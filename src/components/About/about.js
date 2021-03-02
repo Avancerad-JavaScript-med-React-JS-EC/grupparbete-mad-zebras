@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import aboutStyle from './About.module.css';
+import aboutStyle from './about.module.css';
 import eva from '../../assets/graphics/eva-cortado.jpg'
 import footer from '../../assets/graphics/graphics-footer.svg'
 import header from '../../assets/graphics/graphics-header.svg'

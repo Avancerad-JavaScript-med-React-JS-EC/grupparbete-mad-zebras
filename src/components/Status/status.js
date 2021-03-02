@@ -3,16 +3,14 @@ import {useHistory} from 'react-router-dom';
 import React, { useEffect, useState} from 'react'; 
 import style from './Satus.module.css'; 
  
-
 /**API localhost:5000/api/beans; 
 Method: POST, 
 Dscribtion: take a new nr from 
-
 */
 const Status = () => {
     const history = useHistory(); 
-
     const [data,setData]= useState([]); 
+    const ref= "/";
 
   useEffect(()=>{
   
@@ -20,33 +18,30 @@ const Status = () => {
     .then(response =>response.json())
     
     .then (response=>{
+      // window.localStorage.setItem('response', JSON.stringify(response.eta));
+      // console.log(JSON.parse(window.localStorage.getItem('response')));
+      // history.push(ref);
+      
   console.log(response); 
-      console.log(response.eta); 
-      console.log(response.orderNr); 
+      // console.log(response.eta); 
+      // console.log(response.orderNr); 
       
   setData(response); 
     })
   
   },[])
-
     return (
-      
-    <section className={style.container}>
-      
-      <p className={style.order} > Ordernummer {data.orderNr} </p>
+          <section className={style.container}>
+            <p className={style.order} > Ordernummer {data.orderNr} </p>
       <img className= {style.drone} src={imgUrld} alt='drone' />
       <h1 className={style.header}>Din beställning </h1>
       <h1 className={style.header}>är på väg!</h1>
       <p className={style.time}>{data.eta} minuter</p>
       <button className={style.button} type="btn" onClick= {()=>{history.push("/menu")}}> Ok, cool ! </button>
       
-
     </section>
     )
- 
-  
-};
-
+   };
 
 export default Status; 
 

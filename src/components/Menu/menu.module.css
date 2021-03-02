@@ -1,4 +1,39 @@
+
+.App {
+    text-align: center;
+  } 
+  
+  *{
+    box-sizing:border-box; 
+   
+  }
 .section{
     color: black;
     cursor: pointer;
+    margin: 40 auto;
+    width: 600px;
+    background: #F3E4E1;
+    padding-top: 20px;
+    padding-bottom: 10px;
+     text-align: center;
+     font-family: PT Serif;
 }
+
+ body{
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+    max-width: 100%;
+  } 
+
+  .title{
+    text-align: center;
+    font-family: PT Serif;
+    font-size: 50px;
+
+
+  }
+  .btnAdd{
+ 
+
+  }

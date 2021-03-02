@@ -18,8 +18,10 @@ function Menu() {
     
 
     return (
-        <section>
-            <h1 className={ style.section }>Meny</h1>
+        <section  className={ style.section }>
+            <button></button>
+            <button></button>
+            <h1 className={ style.title }>Meny</h1>
             {coffees.map((coffee) => {
                  return  <CoffeeItem coffee={ coffee } key={ coffee.id }/> 
             })}
