@@ -5,7 +5,7 @@ let initialState = {
     coffees: []
 }
 
-let quantity = 0;
+let quantity = 1;
 
 const coffeeReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -27,41 +27,20 @@ const coffeeReducer = (state = initialState, action) => {
             return {
                 total_price: state.total_price - action.total_price,
                 
-                /* coffees: [
-                    ...state.coffees,
-                    state.coffees.filter(coffee => (
-                        coffee.id !== action.payload.id))
-                ] */
-            }
-    default:
-            return state;
-    }
-}
-
-export default coffeeReducer
-
-/* case 'UPDATE':
-
-            return {​​
-
-                ...state,
-
-                coffees: coffees.map(coffee => {​​
-
-                    if (coffee.id !== action.payload.id) {​​
-
+                coffees: state.coffees.map(coffee => {
+                    if(coffee.id !== action.payload.id){
                         return coffee;
+                    }
+                    return{
+                        ...state.coffees,
+                        quantity: coffee.quantity -1
+                    }
+                })
+            }  
 
-                    }​​
+        default:
+            return state;            
+        }
+    }
 
-                    return {​​
-
-                        …coffee,
-
-                        quantity: coffee.quantity + 1
-
-                    }​​
-
-                }​​)
-
-            } */
+export default coffeeReducer;
