@@ -59,8 +59,8 @@ padding-top: 20px;
     font-size: 24px;
        margin-top: 3rem;
     /* margin-left: 7rem; */
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
    
   }
   .button:hover{
@@ -70,15 +70,17 @@ padding-top: 20px;
  
 
   .order{
-width: 279px;
+width: 500px;
 height: 37px;
 font-family: Work Sans;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
-/* align-items: center; */
-/* text-align: center; */
+align-items: center;
 color: rgba(255, 255, 255, 0.7);
+justify-content: center;
+margin-bottom: 30px;
+
 
   }
    .time{
