@@ -21,12 +21,12 @@ function CoffeeMenu({ coffee }){
     
     return(
         <section className={ style.section }>
-            
-            <h2>{ coffee.title }</h2>
+          
+            <h2 className= {style.coffeTitel} >{ coffee.title } { coffee.price } kr </h2>
             <p>{ coffee.desc }</p>
-            <h1>{ coffee.price } kr</h1>
-            <button onClick={ handeClickAdd }>Add Coffee</button>
-            <button onClick={ handeClickRemove }>Remove Coffee</button>
+
+            <button  className={ style.btnAdd }onClick={ handeClickAdd }>Add Coffee</button>
+            <button className={ style.btnRemove }onClick={ handeClickRemove }>Remove Coffee</button>
         </section>
     )
 }
