@@ -1,0 +1,53 @@
+.container{
+    color: black;
+}
+
+.headTitle{
+    font-family: PT Serif;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 120%;
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #2F2926;
+}
+
+.total{
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 120%;
+    
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+
+    color: #2F2926;
+}
+
+.takeMyMoney{
+    background: #2F2926;
+    border-radius: 50px;
+    width: 248px;
+    height: 55px;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
