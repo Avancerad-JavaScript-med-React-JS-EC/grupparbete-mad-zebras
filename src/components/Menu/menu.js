@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import CoffeeItem from './coffeeItem';
 import style from './menu.module.css'
 
