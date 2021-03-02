@@ -1,12 +1,12 @@
 import React from 'react';
-import style from './Cart.module.css'; 
+import style from './cart.module.css'; 
 
 function Cart() {
     return (
         <section className={style.container}>
-<div className={style.bag}>
+            <div className={style.bag}>
 
-</div>
+            </div>
 
             <h1 className={style.headTitle}>Din beställning</h1>
             
