@@ -10,7 +10,7 @@ Dscribtion: take a new nr from
 const Status = () => {
     const history = useHistory(); 
     const [data,setData]= useState([]); 
-    const ref= "/";
+    /* const ref= "/"; */
 
   useEffect(()=>{
   
