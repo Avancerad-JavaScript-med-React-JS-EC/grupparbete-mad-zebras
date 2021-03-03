@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import CoffeeItem from './coffeeItem';
-import style from './menu.module.css'
+import style from './menu.module.css';
+import {useHistory} from 'react-router-dom'; 
+import imgUrlb from '../../assets/graphics/bag.svg';
+import imgURLn from '../../assets/graphics/navicon.svg'; 
+import imgUrlh from'../../assets/graphics/graphics-header.svg';
+import imgurlf from '../../assets/graphics/graphics-footer.svg'
 
 
 
 function Menu() {
+    const history = useHistory(); 
     
     const [coffees, setCoffees] = useState([]);
 
@@ -14,17 +20,38 @@ function Menu() {
         .then (response=>{ setCoffees(response.menu) })
     }, [])
 
+
     
 
     return (
+        <div className={style.menuPage}>
         <section  className={ style.section }>
-            <button></button>
-            <button></button>
+            <div  className={ style.header} > <img className={ style.imgheader}src={imgUrlh }allt='header' />
+
+            {/* <div className={ style.nav}> */}
+
+            <div className={style.navicon } > 
+            <img className= {style.imgnavIcon}src={imgURLn} allt ='navicon' onClick={()=>history.push('/nav')} />
+            </div>
+
+            <div className={ style.bag}>
+            <img className= {style.imgBag} src= {imgUrlb} onClick={()=>history.push('/cart')} />
+            </div>
+
+           
+            {/* </div> */}
+            <div className={style.footer}> <img  src= {imgurlf} /> </div>
+    
+            </div>
+
             <h1 className={ style.title }>Meny</h1>
             {coffees.map((coffee) => {
                  return  <CoffeeItem coffee={ coffee } key={ coffee.id }/> 
             })}
+
+            
         </section>
+        </div>
     )
 }
 
