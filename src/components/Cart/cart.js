@@ -14,7 +14,7 @@ import { increaseCoffee } from '../../actions/action'
 
 
 
-function Cart({ total_price, coffee }) {
+function Cart({ total_price, coffees }) {
     const menu =  useSelector(state => state.coffeeReducer);
     useEffect(() => {
         console.log(menu)
@@ -31,14 +31,9 @@ function Cart({ total_price, coffee }) {
     return (
         <section className={style.container}>
 
-
-            
             <div className={style.arrow}>
                 <i className="fas fa-sort-up"></i>
             </div>
-
-            {/* <button>HamburgerMenu</button>
-            <button>CartMenu</button> */}
 
             <div className={style.headTitleContainer}>
                 <h1 className={ style.headTitle }>Din beställning</h1>
@@ -60,12 +55,8 @@ function Cart({ total_price, coffee }) {
 
             <div className={style.totalContainer}>
                 <div className={style.total}>
-                    <h1 className={ style.totalTitle }>Total ....................</h1>
+                    <h1 className={ style.totalTitle }>Total .................................{ total_price }</h1>
                     <p>inkl moms + drönarleverans</p>
-                </div>
-
-                <div className={style.priceContainer}>
-                    <h1>{ coffee.total_price }</h1>
                 </div>
             </div>
 
@@ -73,14 +64,13 @@ function Cart({ total_price, coffee }) {
                 <button className={ style.takeMyMoney }>Take my money!</button>
             </div>
 
-
         </section>
     );
 }
 
 function mapStateToProps(store) {
-    const { total_price } = store;
-    return { total_price };
+    const { total_price, coffees } = store;
+    return { total_price, coffees };
 }
 
 export default connect(mapStateToProps)(Cart);
