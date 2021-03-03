@@ -1,30 +1,39 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import style from './menu.module.css'
-
-import { addCoffee } from'../../actions/action'
-import Cart from '../Cart/cart'
-
+import CoffeeAction from '../../actions/action'
+import { CoffeeActionREMOVE } from '../../actions/action'
 
 function CoffeeMenu({ coffee }){
-
-    
+  
     const dispatch = useDispatch();
 
     function handeClickAdd(){
-        dispatch(addCoffee(coffee))
+        dispatch(CoffeeAction(coffee))
     }
 
+    function handeClickRemove(){
+        dispatch(CoffeeActionREMOVE(coffee))
+    }
     
-    
+   
+      
     
     return(
-        <section className={ style.section }>
-            
-            <h2 className= {style.coffeTitel} >{ coffee.title } { coffee.price } kr </h2>
-            <p>{ coffee.desc }</p>
+        <section  className={ style.section }>
+              
+            <div className={style.addCoffeInfo}>
+            <button  className={ style.btnAdd }onClick={ handeClickAdd }> + </button>
+            <div className= {style.coffeOchPrice}>
+            <h2 className= {style.coffeTitel} >{ coffee.title }  </h2>
+      
+            <h2  className= {style.coffeTitel}>{ coffee.price } kr</h2>
+            </div>
+            </div>
+            <p className= {style.subTitel}>{ coffee.desc }</p>
 
-            <button onClick={ handeClickAdd }>Add Coffee</button>
+           
+            {/* <button className={ style.btnRemove }onClick={ handeClickRemove }>Remove Coffee</button> */}
         </section>
     )
 }
