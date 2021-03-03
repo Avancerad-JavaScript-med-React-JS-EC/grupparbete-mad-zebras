@@ -21,36 +21,43 @@ function Menu() {
     }, [])
 
 
+
+    // const  Navbar = ({menu})=>{
+    //     const {count} = menu; 
+        
+    
+    // }
     
 
     return (
         <div className={style.menuPage}>
-        <section  className={ style.section }>
+       
             <div  className={ style.header} > <img className={ style.imgheader}src={imgUrlh }allt='header' />
+           
+                
+                <div className={style.navicon } > 
+                    <img className= {style.imgnavIcon}src={imgURLn} allt ='navicon' onClick={()=>history.push('/nav')} />
+                
+                </div>
 
-            {/* <div className={ style.nav}> */}
-
-            <div className={style.navicon } > 
-            <img className= {style.imgnavIcon}src={imgURLn} allt ='navicon' onClick={()=>history.push('/nav')} />
-            </div>
 
             <div className={ style.bag}>
             <img className= {style.imgBag} src= {imgUrlb} onClick={()=>history.push('/cart')} />
+            
+            {/* <p className={style.amount}> {count} </p> */}
+
             </div>
 
-           
-            {/* </div> */}
             <div className={style.footer}> <img  src= {imgurlf} /> </div>
-    
-            </div>
-
+</div>
+           
             <h1 className={ style.title }>Meny</h1>
             {coffees.map((coffee) => {
                  return  <CoffeeItem coffee={ coffee } key={ coffee.id }/> 
             })}
 
             
-        </section>
+    
         </div>
     )
 }

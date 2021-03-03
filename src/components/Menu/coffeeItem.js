@@ -1,13 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import style from './menu.module.css'
-
 import CoffeeAction from '../../actions/action'
 import { CoffeeActionREMOVE } from '../../actions/action'
 
 function CoffeeMenu({ coffee }){
-
-    
+  
     const dispatch = useDispatch();
 
     function handeClickAdd(){
@@ -18,10 +16,12 @@ function CoffeeMenu({ coffee }){
         dispatch(CoffeeActionREMOVE(coffee))
     }
     
+   
+      
     
     return(
         <section  className={ style.section }>
-            
+              
             <div className={style.addCoffeInfo}>
             <button  className={ style.btnAdd }onClick={ handeClickAdd }> + </button>
             <div className= {style.coffeOchPrice}>
@@ -32,7 +32,7 @@ function CoffeeMenu({ coffee }){
             </div>
             <p className= {style.subTitel}>{ coffee.desc }</p>
 
-            
+           
             {/* <button className={ style.btnRemove }onClick={ handeClickRemove }>Remove Coffee</button> */}
         </section>
     )
