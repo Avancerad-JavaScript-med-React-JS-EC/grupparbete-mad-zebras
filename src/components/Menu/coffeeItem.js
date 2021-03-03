@@ -1,25 +1,28 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import style from './menu.module.css'
-import CoffeeAction from '../../actions/action'
-import { CoffeeActionREMOVE } from '../../actions/action'
+
+
+import { addCoffee } from'../../actions/action'
+import Cart from '../Cart/cart'
+
+
 
 function CoffeeMenu({ coffee }){
   
     const dispatch = useDispatch();
 
     function handeClickAdd(){
-        dispatch(CoffeeAction(coffee))
+        dispatch(addCoffee(coffee))
     }
 
-    function handeClickRemove(){
-        dispatch(CoffeeActionREMOVE(coffee))
-    }
+    
     
    
       
     
     return(
+
         <section  className={ style.section }>
               
             <div className={style.addCoffeInfo}>
@@ -34,6 +37,7 @@ function CoffeeMenu({ coffee }){
 
            
             {/* <button className={ style.btnRemove }onClick={ handeClickRemove }>Remove Coffee</button> */}
+
         </section>
     )
 }

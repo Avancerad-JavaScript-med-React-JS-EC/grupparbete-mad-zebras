@@ -1,83 +1,63 @@
 
 
 let initialState = {
-    total_price: 0,
+    total_price: 150,
     coffees: []
 }
 let initialStore ={
     count:0
 };
 
-let quantity = 0;
+
 
 const coffeeReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_COFFEE':
 
-            // if (CoffeeAction.type === 'ADD_COFFEE'){
-            //     // return {count: state.count +1}
-            // }
-
-            // if (CoffeeActionREMOVE.type === 'REMOVE_COFFEE'){
-            //     return {count: state.count - 1}
-            // }
-
-            
-            return {
-             
-                total_price: state.total_price + action.total_price,
-                
-                coffees: [
-                    ...state.coffees,
-                    {
-                        id: action.payload.id,
-                        title: action.payload.title,
-                        price: action.payload.price,
-                        quantity: quantity++
-                    }
-                ]
-                
-            }
-        
-        case 'REMOVE_COFFEE':
-            return {
-                total_price: state.total_price - action.total_price,
-                
-                /* coffees: [
-                    ...state.coffees,
-                    state.coffees.filter(coffee => (
-                        coffee.id !== action.payload.id))
-                ] */
-            }
-    default:
-            return state;
-    }
-}
-
-export default coffeeReducer
-
-/* case 'UPDATE':
-
-            return {​​
-
+            return{
                 ...state,
+                total_price: state.total_price + action.payload.price, 
+                coffees: [...state.coffees,action.payload]
+        
+       
 
-                coffees: coffees.map(coffee => {​​
+        case 'INCREASE_COFFEE':
+            let cart = state.coffees.map((coffeeItem) => {
+                if(coffeeItem.id === action.payload.id){
+                    coffeeItem = {...coffeeItem, quantity: coffeeItem.quantity +1, price: coffeeItem.price + action.payload.price}
+                }
+                
+                return coffeeItem
+            })
 
-                    if (coffee.id !== action.payload.id) {​​
+            return{
+                ...state,
+                total_price: state.total_price + action.payload.price, 
+                coffees: cart
+                
+                
+                
+            }
+            
+            
+        case 'DECREASE_COFFEE':
+            
+            let Itemcart = state.coffees.map((coffeeItem) => {
+                if(coffeeItem.id === action.payload.id){
+                    coffeeItem = {...coffeeItem, quantity: coffeeItem.quantity -1, price: coffeeItem.price - action.payload.price}
+                }
+                return coffeeItem
+            })
+            
+            return{
+                ...state,
+                total_price: state.total_price - action.payload.price, 
+                coffees: Itemcart
+            }
 
-                        return coffee;
+        default:
+            return state;            
+        }
+    }
 
-                    }​​
-
-                    return {​​
-
-                        …coffee,
-
-                        quantity: coffee.quantity + 1
-
-                    }​​
-
-                }​​)
-
-            } */
+export default coffeeReducer;
