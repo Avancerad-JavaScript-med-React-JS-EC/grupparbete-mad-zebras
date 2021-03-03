@@ -5,6 +5,7 @@ import {useHistory} from 'react-router-dom';
 import imgUrlb from '../../assets/graphics/bag.svg';
 import imgURLn from '../../assets/graphics/navicon.svg'; 
 import imgUrlh from'../../assets/graphics/graphics-header.svg';
+import imgurlf from '../../assets/graphics/graphics-footer.svg'
 
 
 
@@ -23,18 +24,26 @@ function Menu() {
     
 
     return (
+        <div className={style.menuPage}>
         <section  className={ style.section }>
-            <div  className={ style.header} > <img src={imgUrlh }allt='header' />
-            <div className={ style.nav}>
+            <div  className={ style.header} > <img className={ style.imgheader}src={imgUrlh }allt='header' />
+
+            {/* <div className={ style.nav}> */}
+
+            <div className={style.navicon } > 
+            <img className= {style.imgnavIcon}src={imgURLn} allt ='navicon' onClick={()=>history.push('/nav')} />
+            </div>
+
             <div className={ style.bag}>
-            <img src={imgUrlb} onClick={()=>history.push('/cart')} />
+            <img className= {style.imgBag} src= {imgUrlb} onClick={()=>history.push('/cart')} />
             </div>
-            <div className={style.nav } > 
-            <img src={imgURLn} allt ='navicon' onClick={()=>history.push('/nav')} />
-            </div>
-            </div>
+
+           
+            {/* </div> */}
+            <div className={style.footer}> <img  src= {imgurlf} /> </div>
     
             </div>
+
             <h1 className={ style.title }>Meny</h1>
             {coffees.map((coffee) => {
                  return  <CoffeeItem coffee={ coffee } key={ coffee.id }/> 
@@ -42,6 +51,7 @@ function Menu() {
 
             
         </section>
+        </div>
     )
 }
 
