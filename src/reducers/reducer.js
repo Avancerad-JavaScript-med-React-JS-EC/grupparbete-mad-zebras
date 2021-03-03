@@ -4,17 +4,22 @@ let initialState = {
     total_price: 150,
     coffees: []
 }
+let initialStore ={
+    count:0
+};
 
 
 
 const coffeeReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_COFFEE':
+
             return{
                 ...state,
                 total_price: state.total_price + action.payload.price, 
                 coffees: [...state.coffees,action.payload]
-            }
+        
+       
 
         case 'INCREASE_COFFEE':
             let cart = state.coffees.map((coffeeItem) => {

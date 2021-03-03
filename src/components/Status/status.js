@@ -7,6 +7,7 @@ import style from './Satus.module.css';
 Method: POST, 
 Dscribtion: take a new nr from 
 */
+
 const Status = () => {
     const history = useHistory(); 
     const [data,setData]= useState([]); 
