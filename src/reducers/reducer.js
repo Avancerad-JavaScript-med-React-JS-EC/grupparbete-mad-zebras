@@ -5,38 +5,50 @@ let initialState = {
     coffees: []
 }
 
-let quantity = 1;
+
 
 const coffeeReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_COFFEE':
-            return {
-                total_price: state.total_price + action.total_price,
-                
-                coffees: [
-                    ...state.coffees,
-                    {
-                        id: action.payload.id,
-                        title: action.payload.title,
-                        price: action.payload.price,
-                        quantity: quantity++
-                    }
-                ]
+            return{
+                ...state,
+                total_price: state.total_price + action.payload.price, 
+                coffees: [...state.coffees,action.payload]
             }
-        case 'REMOVE_COFFEE':
-            return {
-                total_price: state.total_price - action.total_price,
+
+        case 'INCREASE_COFFEE':
+            let cart = state.coffees.map((coffeeItem) => {
+                if(coffeeItem.id === action.payload.id){
+                    coffeeItem = {...coffeeItem, quantity: coffeeItem.quantity +1, price: coffeeItem.price + action.payload.price}
+                }
                 
-                coffees: state.coffees.map(coffee => {
-                    if(coffee.id !== action.payload.id){
-                        return coffee;
-                    }
-                    return{
-                        ...state.coffees,
-                        quantity: coffee.quantity -1
-                    }
-                })
-            }  
+                return coffeeItem
+            })
+
+            return{
+                ...state,
+                total_price: state.total_price + action.payload.price, 
+                coffees: cart
+                
+                
+                
+            }
+            
+            
+        case 'DECREASE_COFFEE':
+            
+            let Itemcart = state.coffees.map((coffeeItem) => {
+                if(coffeeItem.id === action.payload.id){
+                    coffeeItem = {...coffeeItem, quantity: coffeeItem.quantity -1, price: coffeeItem.price - action.payload.price}
+                }
+                return coffeeItem
+            })
+            
+            return{
+                ...state,
+                total_price: state.total_price - action.payload.price, 
+                coffees: Itemcart
+            }
 
         default:
             return state;            

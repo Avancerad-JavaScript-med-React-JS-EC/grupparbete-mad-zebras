@@ -1,6 +1,6 @@
 
 
-const CoffeeAction = (coffee) => {
+export const addCoffee = (coffee) => {
     return {
         type: 'ADD_COFFEE',
         total_price: coffee.price,
@@ -8,12 +8,20 @@ const CoffeeAction = (coffee) => {
     }
 }
 
-export const CoffeeActionREMOVE = (coffee) => {
+export const increaseCoffee = (coffee) => {
     return {
-        type: 'REMOVE_COFFEE',
+        type: 'INCREASE_COFFEE',
         total_price: coffee.price,
         payload: coffee
     }
 }
 
-export default CoffeeAction
+export const decreaseCoffee = (coffee) => {
+    return {
+        type: 'DECREASE_COFFEE',
+        total_price: coffee.price,
+        payload: coffee
+    }
+}
+
+
