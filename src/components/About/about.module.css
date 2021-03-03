@@ -5,9 +5,9 @@
     justify-content: center;
     text-align: center;
     border: 1px solid black;
-    width: 29%;
     margin: 5rem auto;
-    height: 66rem;
+    width: 375px;
+    height: 1061px;
     padding: 1rem;
     background: #F3E4E1;
     position: relative;
@@ -20,10 +20,12 @@
     position: absolute;
     top: .8rem;
     left: .8rem;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     border: 1px solid whitesmoke;
     background: whitesmoke;
-    padding: 6px;
+    padding: 7px;
     border-radius: 20px;
 }
 
