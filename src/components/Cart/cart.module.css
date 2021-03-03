@@ -1,34 +1,78 @@
 .container{
     color: black;
+    border: 1px solid whitesmoke;
+    background: whitesmoke;
+    width: 341px;
+    height: 565.77px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    margin-top: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.arrow{
+    position: absolute;
+    right: 20px;
+    top: -21px;
+    font-size: 2rem;
+    width: 15px;
+    color: whitesmoke;
+}
+
+.headTitleContainer{
+    display: flex;
+    justify-content: center;
 }
 
 .headTitle{
     font-family: PT Serif;
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 120%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2F2926;
+}
 
-display: flex;
-align-items: center;
-text-align: center;
+.infoContainer, .totalContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15px;
+}
 
-color: #2F2926;
+.objects{
+    width: 95%;
+    justify-content: flex-start;
+}
+
+.arrowsContainer{
+    width: 5%;
+    margin-left: 10px;
+}
+
+.total{
+    width: 95%;
+}
+
+.priceContainer{
+    width: 5%;
+    margin: 0px;
 }
 
 .total{
     font-family: PT Serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 23px;
-    line-height: 120%;
-    
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-
     color: #2F2926;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
 }
 
 .takeMyMoney{
