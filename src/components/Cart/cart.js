@@ -1,19 +1,50 @@
+
 import React from 'react';
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux'
+import { connect } from 'react-redux'
+
 import style from './cart.module.css'; 
+
+import { useSelector } from 'react-redux';
+
 import arrowUp from '../../assets/graphics/arrow-up.svg'
 import arrowDown from '../../assets/graphics/arrow-down.svg'
 
-function Cart() {
+
 
     const history = useHistory();
 
     const coffee = useSelector((state) => {return state})
     console.log(coffee)
 
+import { decreaseCoffee } from '../../actions/action'
+import { increaseCoffee } from '../../actions/action'
+
+
+
+function Cart({ total_price, coffee }) {
+    const menu =  useSelector(state => state.coffeeReducer);
+    useEffect(() => {
+        console.log(menu)
+    }, [menu])
+
+    const dispatch = useDispatch()
+    function handeClickDecrease(){
+        dispatch(decreaseCoffee())
+    }
+    function handeClickIncrease(){
+        dispatch(increaseCoffee())
+    }
+
+
     return (
         <section className={style.container}>
+
+
             
             <div className={style.arrow}>
                 <i className="fas fa-sort-up"></i>
@@ -55,8 +86,14 @@ function Cart() {
                 <button className={ style.takeMyMoney } onClick={ () => history.push(`/status`) }>Take my money!</button>
             </div>
 
+
         </section>
     );
 }
 
-export default Cart;
+function mapStateToProps(store) {
+    const { total_price } = store;
+    return { total_price };
+}
+
+export default connect(mapStateToProps)(Cart);
