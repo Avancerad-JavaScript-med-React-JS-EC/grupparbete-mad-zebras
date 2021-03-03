@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import style from './menu.module.css'
 
 import { addCoffee } from'../../actions/action'
+import Cart from '../Cart/cart'
 
 
 function CoffeeMenu({ coffee }){
@@ -19,7 +20,7 @@ function CoffeeMenu({ coffee }){
     
     return(
         <section className={ style.section }>
-          
+            
             <h2 className= {style.coffeTitel} >{ coffee.title } { coffee.price } kr </h2>
             <p>{ coffee.desc }</p>
 

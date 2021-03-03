@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { connect } from 'react-redux'
 import style from './cart.module.css'; 
+import { useSelector } from 'react-redux';
 
 import { decreaseCoffee } from '../../actions/action'
 import { increaseCoffee } from '../../actions/action'
 
-function Cart({ total_price }) {
 
-    /* const dispatch = useDispatch()
 
+function Cart({ total_price, coffee }) {
+    const menu =  useSelector(state => state.coffeeReducer);
+    useEffect(() => {
+        console.log(menu)
+    }, [menu])
+
+    const dispatch = useDispatch()
     function handeClickDecrease(){
-        dispatch(decreaseCoffee(coffee))
+        dispatch(decreaseCoffee())
     }
-
     function handeClickIncrease(){
-        dispatch(increaseCoffee(coffee))
-    } */
+        dispatch(increaseCoffee())
+    }
 
     return (
         <section className={style.container}>
@@ -24,8 +29,9 @@ function Cart({ total_price }) {
             <button>HamburgerMenu</button>
             <button>CartMenu</button>
 
-            <button>Decrease Coffee</button>
-            <button>Increase Coffee</button>
+            <button onClick={ handeClickIncrease }>Increase Coffee</button>
+            <button onClick={ handeClickDecrease }>Decrease Coffee</button>
+            
 
             <h1 className={ style.headTitle }>Din beställning</h1>
 
@@ -37,8 +43,8 @@ function Cart({ total_price }) {
 }
 
 function mapStateToProps(store) {
-    const { total_price, coffees } = store;
-    return { total_price, coffees };
+    const { total_price } = store;
+    return { total_price };
 }
 
 export default connect(mapStateToProps)(Cart);

@@ -9,19 +9,19 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import coffeeReducer from './reducers/reducer'
-import { loadState, saveState } from './localstorage'
+/* import { loadState, saveState } from './localstorage' */
 
-const persistedState = loadState();
+/* const persistedState = loadState(); */
 
 const store = createStore(
   coffeeReducer,
-  persistedState, 
+  /* persistedState, */
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-store.subscribe(() => {
+/* store.subscribe(() => {
   saveState(store.getState());
-});
+}); */
 
 ReactDOM.render(
   <React.StrictMode>
@@ -34,7 +34,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

@@ -1,7 +1,7 @@
 
 
 let initialState = {
-    total_price: 0,
+    total_price: 150,
     coffees: []
 }
 
