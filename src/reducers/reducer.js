@@ -4,9 +4,7 @@ let initialState = {
     total_price: 150,
     coffees: []
 }
-let initialStore ={
-    count:0
-};
+
 
 
 
@@ -17,11 +15,13 @@ const coffeeReducer = (state = initialState, action) => {
             return{
                 ...state,
                 total_price: state.total_price + action.payload.price, 
-                coffees: [...state.coffees,action.payload]
+                coffees: [...state.coffees, action.payload]
+            }
         
        
 
         case 'INCREASE_COFFEE':
+
             let cart = state.coffees.map((coffeeItem) => {
                 if(coffeeItem.id === action.payload.id){
                     coffeeItem = {...coffeeItem, quantity: coffeeItem.quantity +1, price: coffeeItem.price + action.payload.price}
@@ -34,9 +34,6 @@ const coffeeReducer = (state = initialState, action) => {
                 ...state,
                 total_price: state.total_price + action.payload.price, 
                 coffees: cart
-                
-                
-                
             }
             
             
