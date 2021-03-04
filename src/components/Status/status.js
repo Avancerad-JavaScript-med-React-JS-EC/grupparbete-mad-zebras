@@ -5,7 +5,7 @@ import style from './Satus.module.css';
  
 /**API localhost:5000/api/beans; 
 Method: POST, 
-Dscribtion: take a new nr from 
+Dscribtion: take a new nr from API
 */
 
 const Status = () => {

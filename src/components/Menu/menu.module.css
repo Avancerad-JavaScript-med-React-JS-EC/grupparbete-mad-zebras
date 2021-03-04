@@ -74,7 +74,7 @@
  
 
   .bag{
-  background-color: rgb(42, 37, 37); 
+  background-color:#2F2926; 
   border-radius:50% ;
   cursor: pointer;
   width: 60px;
@@ -89,22 +89,38 @@
   top:60px;
 
 
-
-
 } 
+
+
+
+.coffeesNumber {
+  position: absolute;
+  color:white;
+  font-size: 15px;
+right: 8px;
+
+}
 
 .imgBag{
   width: 25px;
   height: 25px;
   display: flex;
   justify-content: center;
+  position: absolute;
 
 } 
 
-.amount{
-  width: 15px;
-  height: 15px;
-  margin-bottom: 100px;
+.amout{
+  width: 25px;
+  height: 25px;
+  margin-bottom: 20px;
+  background-color:red;
+   border-radius:50% ;
+  cursor: pointer;
+   position: relative;
+  left: 15px;
+  top : -20px;
+
 
 }
 
@@ -175,3 +191,4 @@
   background: #F3E4E1;
 
 }
+

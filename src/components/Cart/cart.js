@@ -1,24 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
-/* import { useDispatch } from 'react-redux' */
-import { connect } from 'react-redux'
-
-import CartItem from './cartItem'
+import { connect } from 'react-redux';
+import CartItem from './cartItem';
 import style from './cart.module.css'; 
+import imgUrlb from '../../assets/graphics/bag.svg';
 
 
-/* import { useSelector } from 'react-redux'; */
 
 
 function Cart({ total_price, coffees }) {
  
     const history = useHistory();
+    const coffeesFromState = useSelector(state => state.coffees)
+
+
+    console.log(coffeesFromState)
 
 
     return (
+        
         <section className={style.container}>
+            
+            <div className={style.bag}>
+            <img className={style.imgBag} src={imgUrlb} />
+            <div className={style.amout}> 
+            <span className={style.coffeesNumber}> {coffeesFromState.length} </span>
+            </div>
+            </div>
+            
 
             <div className={style.arrow}>
                 <i className="fas fa-sort-up"></i>
