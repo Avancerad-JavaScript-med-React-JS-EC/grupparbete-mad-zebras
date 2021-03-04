@@ -51,9 +51,10 @@ function Menu() {
            
 
             <h1 className={ style.title }>Meny</h1>
+            
             {coffees.map((coffee) => {
                  return  <CoffeeItem coffee={ coffee } key={ coffee.id }/> 
-            })}-
+            })}
 
             
     
