@@ -32,16 +32,18 @@ function Cart({ total_price, coffees }) {
 
                 
             {coffees.map((coffee) => {
-                    return  <CartItem coffee={ coffee } key={ coffee.id }/>
-                            })}
+                    return  <CartItem coffee={ coffee } key={ coffee.id }/>})}
 
-            </div>er
+            </div>
 
             <div className={style.totalContainer}>
                 <div className={style.total}>
+                    <h1 className={ style.totalTitle }>Total <span>......................</span></h1>
+                    <p className={style.moms}>inkl moms + drönarleverans</p>
+                </div>
 
-                    <h1 className={ style.totalTitle }>Total .................................{ total_price }</h1>
-                    <p>inkl moms + drönarleverans</p>
+                <div className={style.priceContainer}>
+                    { total_price }
                 </div>
             </div>
 
