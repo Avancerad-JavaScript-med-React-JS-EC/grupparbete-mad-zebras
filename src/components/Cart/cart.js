@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import { connect } from 'react-redux'
 import style from './cart.module.css'; 
-
 import { useSelector } from 'react-redux';
-
 import arrowUp from '../../assets/graphics/arrow-up.svg'
 import arrowDown from '../../assets/graphics/arrow-down.svg'
-
-
 import { decreaseCoffee } from '../../actions/action'
 import { increaseCoffee } from '../../actions/action'
-
+import imgUrlb from '../../assets/graphics/bag.svg';
+import { useHistory } from 'react-router-dom'; 
 
 
 function Cart({ total_price, coffee }) {
+
+    const history = useHistory(); 
     const menu =  useSelector(state => state.coffeeReducer);
     useEffect(() => {
         console.log(menu)
@@ -31,6 +30,9 @@ function Cart({ total_price, coffee }) {
     return (
         <section className={style.container}>
 
+ <div className={ style.bag}>
+            <img className= {style.imgBag} src= {imgUrlb} onClick={()=>history.push('/status')} />
+            </div>
 
             
             <div className={style.arrow}>
@@ -65,7 +67,7 @@ function Cart({ total_price, coffee }) {
                 </div>
 
                 <div className={style.priceContainer}>
-                    <h1>{ coffee.total_price }</h1>
+                    {/* <h1>{ coffee.total_price }</h1> */}
                 </div>
             </div>
 

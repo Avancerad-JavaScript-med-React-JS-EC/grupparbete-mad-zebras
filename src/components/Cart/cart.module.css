@@ -95,3 +95,31 @@
 
     color: #FFFFFF;
 }
+
+.bag{
+    background-color: rgb(42, 37, 37); 
+    border-radius:50% ;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+     margin-left: 250px;
+    /* position: absolute; */
+    margin-bottom: 100px;
+    top:60px;
+  
+  
+  
+  
+  } 
+  
+  .imgBag{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+  
+  } 

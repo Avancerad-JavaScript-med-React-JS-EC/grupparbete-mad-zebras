@@ -18,6 +18,7 @@ const coffeeReducer = (state = initialState, action) => {
                 ...state,
                 total_price: state.total_price + action.payload.price, 
                 coffees: [...state.coffees,action.payload]
+            }
         
        
 

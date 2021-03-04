@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'; 
 import CoffeeItem from './coffeeItem';
 import style from './menu.module.css';
-import {useHistory} from 'react-router-dom'; 
 import imgUrlb from '../../assets/graphics/bag.svg';
 import imgURLn from '../../assets/graphics/navicon.svg'; 
 import imgUrlh from'../../assets/graphics/graphics-header.svg';
@@ -14,7 +13,7 @@ function Menu() {
     const history = useHistory(); 
     
     const [coffees, setCoffees] = useState([]);
-    const history = useHistory();
+  
 
     useEffect(()=>{
         fetch('http://localhost:5000/api/beans', {method: 'GET'})
