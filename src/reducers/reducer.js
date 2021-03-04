@@ -2,7 +2,8 @@
 
 let initialState = {
     total_price: 0,
-    coffees: []
+    coffees: [],
+     quantity:0
 }
 
 
@@ -10,6 +11,11 @@ let initialState = {
 
 const coffeeReducer = (state = initialState, action) => {
     switch (action.type) {
+
+
+
+
+
         case 'ADD_COFFEE':
 
             return{
@@ -18,7 +24,6 @@ const coffeeReducer = (state = initialState, action) => {
                 coffees: [...state.coffees, action.payload]
             }
         
-       
 
         case 'INCREASE_COFFEE':
 

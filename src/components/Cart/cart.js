@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
-
-import { connect } from 'react-redux'
-
-import CartItem from './cartItem'
+import { connect } from 'react-redux';
+import CartItem from './cartItem';
 import style from './cart.module.css'; 
+import imgUrlb from '../../assets/graphics/bag.svg';
 
 
 
@@ -13,10 +12,23 @@ import style from './cart.module.css';
 function Cart({ total_price, coffees }) {
  
     const history = useHistory();
+    const coffeesFromState = useSelector(state => state.coffees)
+
+
+    console.log(coffeesFromState)
 
 
     return (
+        
         <section className={style.container}>
+            
+            <div className={style.bag}>
+            <img className={style.imgBag} src={imgUrlb} />
+            <div className={style.amout}> 
+            <span className={style.coffeesNumber}> {coffeesFromState.length} </span>
+            </div>
+            </div>
+            
 
             <div className={style.arrow}>
                 <i className="fas fa-sort-up"></i>
@@ -28,17 +40,20 @@ function Cart({ total_price, coffees }) {
 
             <div className={style.infoContainer}>
 
-                {coffees.map((coffee) => {
-                    return  <CartItem coffee={ coffee } key={ coffee.id }/>
-                            })}
+                
+            {coffees.map((coffee) => {
+                    return  <CartItem coffee={ coffee } key={ coffee.id }/>})}
 
             </div>
 
             <div className={style.totalContainer}>
                 <div className={style.total}>
+                    <h1 className={ style.totalTitle }>Total <span>......................</span></h1>
+                    <p className={style.moms}>inkl moms + drönarleverans</p>
+                </div>
 
-                    <h1 className={ style.totalTitle }>Total ...........................{ total_price }</h1>
-                    <p>inkl moms + drönarleverans</p>
+                <div className={style.priceContainer}>
+                    { total_price }
                 </div>
             </div>
 

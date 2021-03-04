@@ -1,9 +1,10 @@
 .container{
+    margin-top: 20px;
     color: black;
     border: 1px solid whitesmoke;
     background: whitesmoke;
-    width: 341px;
-    height: 565.77px;
+    width: 350px;
+    height: 600px;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     margin-top: 3rem;
     position: relative;
@@ -11,6 +12,7 @@
     flex-direction: column;
     justify-content: space-around;
     border-radius: 3px;
+    padding: 0px 10px;
 }
 
 .arrow{
@@ -40,12 +42,13 @@
     line-height: 0px;
 }
 
-.infoContainer, .totalContainer{
+.infoContainer{
     display: flex;
     flex-direction: column;
-    
+    width: 90%;
     justify-content: space-between;
-    margin: 0px 15px;
+    margin: 0px auto;
+    overflow: scroll;
 }
 
 .objects{
@@ -58,7 +61,7 @@
 .menuTitle{
     font-size: 1.7rem;
     line-height: 0px;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 span{
@@ -75,13 +78,22 @@ span{
     cursor: pointer;
 }
 
+.totalContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
 .total{
-    width: 95%;
+    width: 82%;
 }
 
 .priceContainer{
     width: 12%;
-    margin: 0px;
+    font-family: PT Serif;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .totalTitle{
@@ -89,7 +101,6 @@ span{
     font-size: 1.7rem;
     color: #2F2926;
     line-height: 0rem;
-    margin-top: 2.3rem;
 }
 
 .price{
@@ -118,8 +129,9 @@ span{
     text-align: center;
     color: #FFFFFF;
 }
+
 .bag{
-    background-color: rgb(42, 37, 37); 
+    background-color:#2F2926; 
     border-radius:50% ;
     cursor: pointer;
     width: 60px;
@@ -128,20 +140,41 @@ span{
     font-size: 25px;
     justify-content: center;
     align-items: center;
-     margin-left: 250px;
-    /* position: absolute; */
-    margin-bottom: 100px;
-    top:60px;
-  
-  
-  
+     margin-left: 280px;
+    position: absolute;
+    top:-61px;
   
   } 
+  
+  
+  .coffeesNumber {
+    position: absolute;
+    color:white;
+    font-size: 15px;
+  right: 8px;
+  
+  }
   
   .imgBag{
     width: 25px;
     height: 25px;
     display: flex;
     justify-content: center;
+    position: absolute;
   
   } 
+  
+  .amout{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 20px;
+    background-color:red;
+     border-radius:50% ;
+    cursor: pointer;
+     position: relative;
+    left: 15px;
+    top : -20px;
+  
+  
+  }
+  
