@@ -1,24 +1,23 @@
+
+import React from 'react';
+import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom';
+
 import React, { useState, useEffect } from 'react';
 /* import { useDispatch } from 'react-redux' */
 import { connect } from 'react-redux'
-import style from './cart.module.css';
+
 import CartItem from './cartItem'
-import {useHistory} from 'react-router-dom';  
+import style from './cart.module.css'; 
+
 
 /* import { useSelector } from 'react-redux'; */
 
 
 function Cart({ total_price, coffees }) {
-
-    /* const order = useSelector((state) => {return state}) */
-
-    /* useEffect(() => {
-        console.log(order.coffees[0].price)
-    }, [order])  */
-    
-
-    
+ 
     const history = useHistory();
+
 
     return (
         <section className={style.container}>
@@ -32,14 +31,17 @@ function Cart({ total_price, coffees }) {
             </div>
 
             <div className={style.infoContainer}>
+
                 
             {coffees.map((coffee) => {
                     return  <CartItem coffee={ coffee } key={ coffee.id }/>
                             })}
-            </div>
+
+            </div>er
 
             <div className={style.totalContainer}>
                 <div className={style.total}>
+
                     <h1 className={ style.totalTitle }>Total .................................{ total_price }</h1>
                     <p>inkl moms + drönarleverans</p>
                 </div>
@@ -48,7 +50,7 @@ function Cart({ total_price, coffees }) {
             <div className={style.buttonContainer}>
                 <button onClick={()=>history.push('/status')} className={ style.takeMyMoney }>Take my money!</button>
             </div>
-
+  
         </section>
     );
 }
