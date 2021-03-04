@@ -4,6 +4,7 @@ let initialState = {
     total_price: 150,
     coffees: []
 }
+
 let initialStore ={
     count:0
 };
