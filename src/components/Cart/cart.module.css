@@ -1,4 +1,5 @@
 .container{
+    margin-top: 20px;
     color: black;
     border: 1px solid whitesmoke;
     background: whitesmoke;
@@ -118,8 +119,9 @@ span{
     text-align: center;
     color: #FFFFFF;
 }
+
 .bag{
-    background-color: rgb(42, 37, 37); 
+    background-color:#2F2926; 
     border-radius:50% ;
     cursor: pointer;
     width: 60px;
@@ -128,20 +130,41 @@ span{
     font-size: 25px;
     justify-content: center;
     align-items: center;
-     margin-left: 250px;
-    /* position: absolute; */
-    margin-bottom: 100px;
-    top:60px;
-  
-  
-  
+     margin-left: 280px;
+    position: absolute;
+    top:-61px;
   
   } 
+  
+  
+  .coffeesNumber {
+    position: absolute;
+    color:white;
+    font-size: 15px;
+  right: 8px;
+  
+  }
   
   .imgBag{
     width: 25px;
     height: 25px;
     display: flex;
     justify-content: center;
+    position: absolute;
   
   } 
+  
+  .amout{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 20px;
+    background-color:red;
+     border-radius:50% ;
+    cursor: pointer;
+     position: relative;
+    left: 15px;
+    top : -20px;
+  
+  
+  }
+  

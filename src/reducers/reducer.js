@@ -6,24 +6,14 @@ let initialState = {
      quantity:0
 }
 
-// // let initialAmount= {
-//     amount_coffe:0 ,
 
-// // }
 
 
 const coffeeReducer = (state = initialState, action) => {
     switch (action.type) {
 
 
-// case 'INCRESE_QUANTITY':
-//     return{
-//       ...state, 
-//       amount_coffee: coffeeItem.quantity+ action.amount_coffee
-     
 
-
-//     }
 
 
         case 'ADD_COFFEE':

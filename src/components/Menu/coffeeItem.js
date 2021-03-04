@@ -5,7 +5,6 @@ import { addCoffee } from'../../actions/action'
 
 function CoffeeMenu({ coffee }){
 
-    // const store=createStore()
 
     const dispatch = useDispatch();
 
