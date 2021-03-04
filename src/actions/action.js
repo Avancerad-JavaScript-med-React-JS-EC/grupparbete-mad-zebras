@@ -1,4 +1,4 @@
- 
+
 
 export const addCoffee = (coffee) => {
     return {
@@ -25,11 +25,24 @@ export const decreaseCoffee = (coffee) => {
 }
 
 
-export const quantity=  (coffee)=>{
-    return{
-        type: 'INCRESE_QUANTITY', 
-        amount_coffee:coffee + 1 
-        
+export const quantity = (coffee) => {
+    return {
+        type: 'INCRESE_QUANTITY',
+        amount_coffee: coffee + 1
+
     }
 }
+
+
+
+
+export const clearCoffe = () => {
+    return {
+        type: 'Clear_COFFEE',
+
+    }
+}
+
+
+
 

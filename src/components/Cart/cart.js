@@ -20,6 +20,7 @@ function Cart({ total_price, coffees }) {
 
     return (
         
+        
         <section className={style.container}>
             
             <div className={style.bag}>
