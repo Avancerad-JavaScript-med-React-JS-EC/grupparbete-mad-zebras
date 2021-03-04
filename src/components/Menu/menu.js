@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom'; 
 import CoffeeItem from './coffeeItem';
 import style from './menu.module.css';
 import {useHistory} from 'react-router-dom'; 
@@ -11,7 +10,7 @@ import imgurlf from '../../assets/graphics/graphics-footer.svg'
 
 
 function Menu() {
-    const history = useHistory(); 
+    
     
     const [coffees, setCoffees] = useState([]);
     const history = useHistory();
@@ -24,11 +23,7 @@ function Menu() {
 
 
 
-    // const  Navbar = ({menu})=>{
-    //     const {count} = menu; 
-        
     
-    // }
     
 
     return (
@@ -52,10 +47,11 @@ function Menu() {
             </div>
 
             <div className={style.footer}> <img  src= {imgurlf} /> </div>
-</div>
+            </div>
            
 
             <h1 className={ style.title }>Meny</h1>
+            
             {coffees.map((coffee) => {
                  return  <CoffeeItem coffee={ coffee } key={ coffee.id }/> 
             })}

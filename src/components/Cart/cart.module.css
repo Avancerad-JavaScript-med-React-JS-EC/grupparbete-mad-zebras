@@ -42,6 +42,8 @@
 
 .infoContainer, .totalContainer{
     display: flex;
+    flex-direction: column;
+    
     justify-content: space-between;
     margin: 0px 15px;
 }
