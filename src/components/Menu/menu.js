@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import {useHistory} from 'react-router-dom';
+
 import CoffeeItem from './coffeeItem';
 import style from './menu.module.css';
-import {useHistory} from 'react-router-dom'; 
+
+
 import imgUrlb from '../../assets/graphics/bag.svg';
 import imgURLn from '../../assets/graphics/navicon.svg'; 
 import imgUrlh from'../../assets/graphics/graphics-header.svg';
@@ -46,7 +49,7 @@ function Menu() {
 
             </div>
 
-            <div className={style.footer}> <img  src= {imgurlf} /> </div>
+            <div className={style.footer}> <img className={ style.imgheader} src= {imgurlf} /> </div>
             </div>
            
 

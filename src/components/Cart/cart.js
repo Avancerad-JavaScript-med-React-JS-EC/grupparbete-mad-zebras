@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux'
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-/* import { useDispatch } from 'react-redux' */
+
 import { connect } from 'react-redux'
 
 import CartItem from './cartItem'
 import style from './cart.module.css'; 
 
 
-/* import { useSelector } from 'react-redux'; */
 
 
 function Cart({ total_price, coffees }) {
@@ -30,17 +28,16 @@ function Cart({ total_price, coffees }) {
 
             <div className={style.infoContainer}>
 
-                
-            {coffees.map((coffee) => {
+                {coffees.map((coffee) => {
                     return  <CartItem coffee={ coffee } key={ coffee.id }/>
                             })}
 
-            </div>er
+            </div>
 
             <div className={style.totalContainer}>
                 <div className={style.total}>
 
-                    <h1 className={ style.totalTitle }>Total .................................{ total_price }</h1>
+                    <h1 className={ style.totalTitle }>Total ...........................{ total_price }</h1>
                     <p>inkl moms + drönarleverans</p>
                 </div>
             </div>
