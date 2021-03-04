@@ -136,12 +136,12 @@
 
 
 .nav{
-width: 600px;
-height: 70px;
-justify-content: space-around;
-background-color: aqua;
+  width: 600px;
+  height: 70px;
+  justify-content: space-around;
+  background-color: aqua;
   display: flex; 
- text-align: center; 
+  text-align: center; 
 
 
 }  

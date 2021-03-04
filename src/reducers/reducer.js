@@ -24,7 +24,7 @@ const coffeeReducer = (state = initialState, action) => {
 
             let cart = state.coffees.map((coffeeItem) => {
                 if(coffeeItem.id === action.payload.id){
-                    coffeeItem = {...coffeeItem, quantity: coffeeItem.quantity +1, price: coffeeItem.price * coffeeItem.quantity}
+                    coffeeItem = {...coffeeItem, quantity: coffeeItem.quantity +1, price: action.payload.price + coffeeItem.price}
                 }
                 
                 return coffeeItem
