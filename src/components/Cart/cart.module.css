@@ -14,8 +14,8 @@ body{
     color: black;
     border: 1px solid whitesmoke;
     background: whitesmoke;
-    width: 341px;
-    height: 565.77px;
+    width: 350px;
+    height: 600px;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     margin-top: 3rem;
     position: relative;
@@ -23,6 +23,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     border-radius: 3px;
+    padding: 0px 10px;
 }
 
 .arrow{
@@ -52,12 +53,13 @@ body{
     line-height: 0px;
 }
 
-.infoContainer, .totalContainer{
+.infoContainer{
     display: flex;
     flex-direction: column;
-    
+    width: 90%;
     justify-content: space-between;
-    margin: 0px 15px;
+    margin: 0px auto;
+    overflow: scroll;
 }
 
 .objects{
@@ -70,7 +72,7 @@ body{
 .menuTitle{
     font-size: 1.7rem;
     line-height: 0px;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 span{
@@ -87,13 +89,22 @@ span{
     cursor: pointer;
 }
 
+.totalContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
 .total{
-    width: 95%;
+    width: 82%;
 }
 
 .priceContainer{
     width: 12%;
-    margin: 0px;
+    font-family: PT Serif;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .totalTitle{
@@ -101,7 +112,6 @@ span{
     font-size: 1.7rem;
     color: #2F2926;
     line-height: 0rem;
-    margin-top: 2.3rem;
 }
 
 .price{

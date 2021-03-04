@@ -5,9 +5,9 @@
     justify-content: center;
     border: 1px solid black;
     padding: 3.7rem;
-    width: 375px;
-    height: 667px;    
-    margin-top: 10rem;
+    width : 450;
+    height: 655px;
+    margin : 30px auto;
     background: #38846D;
     position: relative;
     overflow: hidden;
