@@ -1,11 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import style from './menu.module.css'
-
 import { addCoffee } from'../../actions/action'
 
 function CoffeeMenu({ coffee }){
-  
+
+    // const store=createStore()
+
     const dispatch = useDispatch();
 
     function handeClickAdd(){

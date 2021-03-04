@@ -4,15 +4,18 @@ import style from './menu.module.css';
 import imgUrlb from '../../assets/graphics/bag.svg';
 import imgURLn from '../../assets/graphics/navicon.svg'; 
 import imgUrlh from'../../assets/graphics/graphics-header.svg';
-import imgurlf from '../../assets/graphics/graphics-footer.svg'
-
+import imgurlf from '../../assets/graphics/graphics-footer.svg'; 
+// import {useSelector } from 'react-redux'; 
+import { useHistory } from 'react-router-dom';
 
 
 function Menu() {
     
     
     const [coffees, setCoffees] = useState([]);
-  
+    // const count = useSelector (state.useState) 
+    const history = useHistory();
+
 
     useEffect(()=>{
         fetch('http://localhost:5000/api/beans', {method: 'GET'})
@@ -21,9 +24,6 @@ function Menu() {
     }, [])
 
 
-
-    
-    
 
     return (
 
@@ -41,7 +41,7 @@ function Menu() {
             <div className={ style.bag}>
             <img className= {style.imgBag} src= {imgUrlb} onClick={()=>history.push('/cart')} />
             
-            {/* <p className={style.amount}> {count} </p> */}
+            <p className={style.amount}>  </p>
 
             </div>
 

@@ -9,7 +9,6 @@ import CartItem from './cartItem'
 import style from './cart.module.css'; 
 
 
-/* import { useSelector } from 'react-redux'; */
 
 
 function Cart({ total_price, coffees }) {
