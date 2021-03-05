@@ -24,12 +24,11 @@ function Cart({ total_price, coffees }) {
         <section className={style.container}>
             
             <div className={style.bag}>
-            <img className={style.imgBag} src={imgUrlb} />
-            <div className={style.amout}> 
-            <span className={style.coffeesNumber}> {coffeesFromState.length} </span>
+                <img className={style.imgBag} src={imgUrlb} />
+                <div className={style.amout}> 
+                    <span className={style.coffeesNumber}> {coffeesFromState.length} </span>
+                </div>
             </div>
-            </div>
-            
 
             <div className={style.arrow}>
                 <i className="fas fa-sort-up"></i>
@@ -41,7 +40,6 @@ function Cart({ total_price, coffees }) {
 
             <div className={style.infoContainer}>
 
-                
             {coffees.map((coffee) => {
                     return  <CartItem coffee={ coffee } key={ coffee.id }/>})}
 

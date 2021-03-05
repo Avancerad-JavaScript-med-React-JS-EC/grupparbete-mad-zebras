@@ -19,9 +19,10 @@ function CartItem({ coffee }){
 
     return(
         <section>
-
-            <h2 className={style.menuTitle}>{ coffee.title}</h2>
-            <p className={style.menuPrice}>{ coffee.price } kr</p>
+            <div className={style.objects}>
+                <h2 className={style.menuTitle}>{ coffee.title}</h2>
+                <p className={style.menuPrice}>{ coffee.price } kr</p>
+            </div>
 
             <div className={style.arrowsContainer}>
                 <img src={arrowUp} alt='arrowUp' className={style.arrows} onClick={ handeClickIncrease }/>

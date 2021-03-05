@@ -11,11 +11,6 @@ function CoffeeMenu({ coffee }){
     function handeClickAdd(){
         dispatch(addCoffee(coffee))
     }
-
-    
-    
-   
-      
     
     return(
 
