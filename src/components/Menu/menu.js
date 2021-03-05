@@ -49,7 +49,7 @@ function Menu() {
 
                 </div>
 
-                <div className={style.footer}> <img src={imgurlf} /> </div>
+                <div className={style.footer}> <img className={style.imgheader} src={imgurlf} /> </div>
             </div>
 
 
