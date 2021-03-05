@@ -34,7 +34,11 @@ function Menu() {
 
         <div className={style.menuPage}>
 
-            <div className={style.header} > <img className={style.imgheader} src={imgUrlh} allt='header' />
+            <div className={style.header} > 
+
+                <div className={style.imgheader}>
+                    <img className={style.topImg} src={imgUrlh} allt='header' />
+                </div>
 
                 <div className={style.navicon} >
                     <img className={style.imgnavIcon} src={imgURLn} allt='navicon' onClick={() => history.push('/nav')} />
@@ -50,17 +54,22 @@ function Menu() {
                 </div>
 
                 <div className={style.footer}> <img className={style.imgheader} src={imgurlf} /> </div>
+
+
+                <div>
+
+                    <h1 className={style.title}>Meny</h1>
+
+                    {coffees.map((coffee) => {
+                        return <CoffeeItem coffee={coffee} key={coffee.id} />
+                    })}
+
+                </div>
+
+
+
             </div>
-
-
-            <h1 className={style.title}>Meny</h1>
-
-            {coffees.map((coffee) => {
-                return <CoffeeItem coffee={coffee} key={coffee.id} />
-            })}
-
-
-
+            
         </div>
     )
 }
