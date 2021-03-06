@@ -24,7 +24,7 @@ const coffeeReducer = (state = initialState, action) => {
 
         case 'INCREASE_COFFEE':
 
-            let cart = state.coffees.map((coffeeItem) => {
+            const cart = state.coffees.map((coffeeItem) => {
                 if (coffeeItem.id === action.payload.id) {
                     const quantity = coffeeItem.quantity + 1
                     coffeeItem = { ...coffeeItem, quantity}
@@ -46,17 +46,18 @@ const coffeeReducer = (state = initialState, action) => {
 
         case 'DECREASE_COFFEE':
 
-            let Itemcart = state.coffees.map((coffeeItem) => {
+            const itemCart = state.coffees.map((coffeeItem) => {
                 if (coffeeItem.id === action.payload.id) {
-                    coffeeItem = { ...coffeeItem, quantity: coffeeItem.quantity - 1/* , price: coffeeItem.price - action.payload.price */ }
+                    coffeeItem = { ...coffeeItem, quantity: coffeeItem.quantity - 1}
                 }
                 return coffeeItem
             })
+            
 
             return {
                 ...state,
                 total_price: state.total_price - action.payload.price,
-                coffees: Itemcart
+                coffees: itemCart
             }
 
 
