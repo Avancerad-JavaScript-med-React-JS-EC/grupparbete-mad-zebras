@@ -45,7 +45,7 @@ const coffeeReducer = (state = initialState, action) => {
 
 
         case 'DECREASE_COFFEE':
-            console.log('DECREASE_COFFEE')
+
             let Itemcart = state.coffees.map((coffeeItem) => {
                 if (coffeeItem.id === action.payload.id) {
                     coffeeItem = { ...coffeeItem, quantity: coffeeItem.quantity - 1/* , price: coffeeItem.price - action.payload.price */ }

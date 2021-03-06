@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import style from './cart.module.css';
 import arrowUp from '../../assets/graphics/arrow-up.svg'
 import arrowDown from '../../assets/graphics/arrow-down.svg'
-import { decreaseCoffee,increaseCoffee } from '../../actions/action'
+import { decreaseCoffee,increaseCoffee} from '../../actions/action'
 
 function useTotalCoffeePrice(id){
     const {price, quantity} = useSelector(state => state.coffees.find((coffee) => coffee.id === id))
@@ -14,6 +14,7 @@ function useTotalCoffeePrice(id){
 function CartItem({ coffee }){
 
     const totalPrice = useTotalCoffeePrice(coffee.id)
+    
     const dispatch = useDispatch()
 
     function handeClickDecrease(){
