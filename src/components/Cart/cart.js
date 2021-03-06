@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -14,11 +14,8 @@ function Cart({ total_price, coffees }) {
     const history = useHistory();
     const coffeesFromState = useSelector(state => state.coffees)
 
-
-    console.log(coffeesFromState)
-
-
     return (
+        
         
         <section className={style.container}>
             
