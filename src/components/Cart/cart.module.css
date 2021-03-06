@@ -5,7 +5,7 @@ body{
     color:white; 
     max-height: 100%;
     max-width: 100%;
-  }
+}
 
 
 .container{
@@ -14,16 +14,19 @@ body{
     color: black;
     border: 1px solid whitesmoke;
     background: whitesmoke;
-    width: 350px;
-    height: 600px;
+    width: 450px;
+    height: 650px;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     margin-top: 3rem;
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     border-radius: 3px;
     padding: 0px 10px;
+    top: 35px;
+    right: 45px;
+    opacity: 100%;
 }
 
 .arrow{
@@ -62,11 +65,17 @@ body{
     overflow: scroll;
 }
 
+.itemsContainer{
+    width: 100%;
+    display: flex;
+}
+
 .objects{
-    width: 95%;
+    width: 80%;
     justify-content: flex-start;
     font-family: PT Serif;
     color: #2F2926;
+    margin-top: 1rem;
 }
 
 .menuTitle{
@@ -81,7 +90,6 @@ span{
 
 .arrowsContainer{
     width: 5%;
-    margin-left: 10px;
     font-weight: bold;
 }
 
@@ -126,6 +134,7 @@ span{
 .buttonContainer{
     display: flex;
     justify-content: center;
+    margin: 10px auto;
 }
 
 .takeMyMoney{
@@ -154,38 +163,33 @@ span{
      margin-left: 280px;
     position: absolute;
     top:-61px;
+} 
   
-  } 
   
-  
-  .coffeesNumber {
+.coffeesNumber {
     position: absolute;
     color:white;
     font-size: 15px;
-  right: 8px;
-  
-  }
-  
-  .imgBag{
+    right: 8px;
+}
+
+.imgBag{
     width: 25px;
     height: 25px;
     display: flex;
     justify-content: center;
     position: absolute;
-  
-  } 
-  
-  .amout{
+} 
+
+.amout{
     width: 25px;
     height: 25px;
     margin-bottom: 20px;
     background-color:red;
-     border-radius:50% ;
+    border-radius:50% ;
     cursor: pointer;
-     position: relative;
+    position: relative;
     left: 15px;
     top : -20px;
-  
-  
-  }
+}
   
