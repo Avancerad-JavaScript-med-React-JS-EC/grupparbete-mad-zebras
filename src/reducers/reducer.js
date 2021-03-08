@@ -1,8 +1,7 @@
 
 let initialState = {
     total_price: 0,
-    coffees: [],
-    quantity: 0
+    coffees: []
 }
 
 
@@ -12,44 +11,53 @@ const coffeeReducer = (state = initialState, action) => {
 
 
         case 'ADD_COFFEE':
-
-            return {
-                ...state,
-                total_price: state.total_price + action.payload.price,
-                coffees: [...state.coffees, action.payload]
+            const coffeeAlreadyInCart = state.coffees.some((coffee) => coffee.id === action.payload.id)
+            if (!coffeeAlreadyInCart){
+                return {
+                    ...state,
+                    total_price: state.total_price + action.payload.price,
+                    coffees: [...state.coffees, action.payload]
+                }
             }
+            
 
 
         case 'INCREASE_COFFEE':
 
-            let cart = state.coffees.map((coffeeItem) => {
+            const cart = state.coffees.map((coffeeItem) => {
                 if (coffeeItem.id === action.payload.id) {
-                    coffeeItem = { ...coffeeItem, quantity: coffeeItem.quantity + 1, price: action.payload.price + coffeeItem.price }
+                    const quantity = coffeeItem.quantity + 1
+                    coffeeItem = { ...coffeeItem, quantity}
                 }
-
                 return coffeeItem
             })
 
+            const totalPrice = cart.reduce((total, {price, quantity}) =>{
+                return total + (price*quantity)
+            },0)
+
             return {
                 ...state,
-                total_price: state.total_price + action.payload.price,
+                total_price: totalPrice,
                 coffees: cart
             }
+            
 
 
         case 'DECREASE_COFFEE':
 
-            let Itemcart = state.coffees.map((coffeeItem) => {
+            const itemCart = state.coffees.map((coffeeItem) => {
                 if (coffeeItem.id === action.payload.id) {
-                    coffeeItem = { ...coffeeItem, quantity: coffeeItem.quantity - 1, price: coffeeItem.price - action.payload.price }
+                    coffeeItem = { ...coffeeItem, quantity: coffeeItem.quantity - 1}
                 }
                 return coffeeItem
             })
+            
 
             return {
                 ...state,
                 total_price: state.total_price - action.payload.price,
-                coffees: Itemcart
+                coffees: itemCart
             }
 
 
